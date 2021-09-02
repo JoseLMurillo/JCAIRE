@@ -1,0 +1,104 @@
+$assetPath :"/assets/img"
+
+.contenido
+    position: relative
+    top: 0
+    width: 100%
+    height: 100%
+    box-sizing: border-box
+    align-items: center
+
+.about
+    position: relative
+    background-image: url(#{$assetPath}/recursos/photo12.jpg)
+    /* background-color: #333; */
+    background-size: cover
+    background-repeat: no-repeat
+    right: 0
+    width: 100%
+    margin: 0 auto
+    height: 55em
+    align-self: center
+    z-index: 10
+
+.about h1
+    top: 0
+    font-size: 5em
+    margin: 0 auto
+    text-align: center
+    font-family: 'Prompt', san-serif
+
+.about .parrafo, .about .parrafo2
+    position: relative
+    top: 15px
+    right: -49%
+    width: 50%
+    font-size: 1.2em
+    text-align: center
+    padding: 10px
+    background-color: rgba(225, 225, 225, .3)
+
+.about .parrafo2 i
+    margin-left: 12%
+
+.about .parrafo2 a
+    color: white
+
+@media screen and (max-width: 670px)
+    .contenido
+        position: relative
+        top: 0
+        width: 100%
+        height: 100%
+        box-sizing: border-box
+        align-items: center
+    
+
+        & .about
+            background-image: url(#{$assetPath}/recursos/photo12.jpg)
+            background-color: #333
+            background-size: cover
+            background-position: -100px
+            background-repeat: no-repeat
+            left: 0
+            width: 100%
+            height: 36em
+            align-self: center
+            z-index: 0
+
+    .about h1
+        top: 0
+        font-size: 40px
+        margin: 0 auto
+        text-align: center
+        font-weight: Semi-bold 670 italic
+
+    .about .parrafo
+        position: relative
+        top: 15px
+        right: -49%
+        width: 50%
+        font-size: 1.2em
+        text-align: center
+        padding: 10px
+        background-color: rgba(225, 225, 225, .3)
+
+
+    .about .parrafo2
+        position: relative
+        top: 300px
+        right: -49%
+        width: 50%
+        font-size: 1em
+        text-align: center
+        padding: 10px
+        background-color: rgba(225, 225, 225, .3)
+
+
+        & i
+            margin-left: 0%
+
+
+.contenido .trabajos
+    background-color: #fff
+    height: 100px

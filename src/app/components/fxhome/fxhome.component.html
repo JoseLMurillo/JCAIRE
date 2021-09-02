@@ -1,0 +1,47 @@
+<!-- FX NUBES -->
+<div class="efxNuves">
+    <div class="contenedor">
+      <img loading="lazy" id="fondo" class="fondo" src="../assets/img/mountains/prueba/fondo.png" alt="fondo">
+  
+      <img loading="lazy" id="frente" class="frente" src="../assets/img/mountains/prueba/frente.png" alt="frente">
+    </div>
+  
+    <div class="cloud"></div>
+  
+    <div class="degradado">
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.to("#fondo", {
+      scrollTrigger: {
+        scrub: 1
+      },
+      scale: 2.5
+    })
+
+    gsap.to("#frente", {
+      scrollTrigger: {
+        scrub: 1
+      },
+      scale: 2
+    })
+  </script>
+  
+  <!-- CONTENIDO ||MANTENIMIENTO, INSTALACION & REPARACION -->
+  <div id="home">
+    <div id="JC_Aires">
+      <img loading="lazy" id="logo" class="logocentro" src="../assets/img/logo/SVG/Sin.svg" alt="logo">
+      <p>
+        <br>
+        <span id="mantenimiento" class="mantenimiento">Mantenimiento</span>
+        <br>
+        <span class="instalacion">Instalación</span>
+        <br>
+        <span class="reparacion">& Reparación</span>
+      </p>
+    </div>
+</div>

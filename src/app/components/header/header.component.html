@@ -1,0 +1,35 @@
+<!-- HEADER -->
+<header>
+    <img loading="lazy" class="logo" src="../assets/img/logo/SVG/Sin.svg" alt="logo">
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about-jc">Nosotros</a>
+      <a href="#works">Trabajos</a>
+      <a href="#formulario">Contacto</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+
+      <a class="cta" href="#"><button>Contacto</button></a>
+    </div>
+</header>
+
+<script>
+  function myFunction() {
+  let x = document.getElementById("myTopnav");
+  
+  let logo = document.getElementById("logo");
+  
+  let mant = document.getElementById("mantenimiento");
+  
+  if (x.className === "topnav") {
+    x.className += " responsive";
+    logo.style.visibility = "hidden";
+    mantenimiento.style.visibility = "hidden";
+  } else {
+    x.className = "topnav";
+    logo.style.visibility = "visible";
+    mant.style.visibility = "visible";
+  }
+}
+</script>

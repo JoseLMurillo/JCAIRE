@@ -1,0 +1,227 @@
+$assetPath :"/assets/img"
+
+label
+  display: inline-block
+  font-size: 1.5em
+  padding: 0.5em
+
+input[type=text], select, textarea
+  width: 80%
+  font-size: 1em
+  padding: 12px
+  border: 1px solid #ccc
+  border-radius: 4px
+  resize: vertical
+
+input[type=submit]
+  font-size: 1.5em
+  background-color: rgb(255, 255, 255)
+  color: black
+  padding: 12px 80px
+  margin-top: 0.6em
+  border: none
+  border-radius: 4px
+  cursor: pointer
+  float: center
+
+input[type=submit]:hover
+  background-color: rgb(0, 77, 38)
+  color: white
+
+/* SVG AIRE */
+.SVGaire
+  position: relative
+  width: 100%
+  top: -1px
+
+.footer-distributed
+  display: flex
+  position: relative
+  background: #666
+  color: white
+  background-image: url(#{$assetPath}/recursos/rejillas.jpg)
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12)
+  box-sizing: border-box
+  width: 100%
+  text-align: left
+  font: bold 16px sans-serif
+  padding: 55px 50px
+
+
+  & .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right
+    display: inline-block
+    vertical-align: top
+
+  /* Footer left */
+  & .footer-left
+    position: relative
+    width: 40%
+
+
+  & .footer-left svg
+    fill: white
+    position: relative
+    width: 100%
+
+  /* The company logo */
+
+  & h3
+    color: #ffffff
+    font: normal 36px 'Open Sans', cursive
+    margin: 0
+
+
+  & h3 span
+    color: lightseagreen
+
+  /* Footer links */
+  & .footer-links
+    color: #ffffff
+    margin: 20px 0 12px
+    padding: 0
+
+
+  & .footer-links a
+    display: inline-block
+    line-height: 1.8
+    font-weight: 400
+    text-decoration: none
+    color: inherit
+
+
+  & .footer-company-name a
+    color: #222
+    font-size: 14px
+    font-weight: bold
+    margin: 0
+
+  /* Footer Center */
+
+
+  & .footer-center
+    width: 35%
+
+
+  & .footer-center i
+    background-color: #33383b
+    color: #ffffff
+    font-size: 25px
+    width: 38px
+    height: 38px
+    border-radius: 50%
+    text-align: center
+    line-height: 42px
+    margin: 10px 15px
+    vertical-align: middle
+
+
+  & .footer-center i.fa-envelope
+    font-size: 17px
+    line-height: 38px
+
+
+  & .footer-center p
+    display: inline-block
+    color: #ffffff
+    font-weight: 400
+    vertical-align: middle
+    margin: 0
+
+
+  & .footer-center p span
+    display: block
+    font-weight: normal
+    font-size: 14px
+    line-height: 2
+
+
+  & .footer-center p a
+    color: #fff
+    text-decoration: none
+
+
+  & .footer-center p a:hover
+    color: #fff
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1)
+    font-size: 120%
+
+
+  & .footer-links a:before
+    content: "|"
+    font-weight: 300
+    font-size: 20px
+    left: 0
+    color: #fff
+    display: inline-block
+    padding-right: 5px
+
+
+  & .footer-links .link-1:before
+      content: none
+
+  /* Footer Right */
+
+
+  & .footer-right
+    width: 20%
+
+
+  & .footer-company-about
+    line-height: 20px
+    color: #fff
+    font-size: 13px
+    font-weight: normal
+    margin: 0
+
+
+  & .footer-company-about span
+    display: block
+    color: #ffffff
+    font-size: 14px
+    font-weight: bold
+    margin-bottom: 20px
+
+
+  & .footer-icons
+    margin-top: 25px
+
+
+  & .footer-icons a
+    line-height: 38px
+    display: inline-block
+    width: 35px
+    height: 35px
+    cursor: pointer
+    background-color: #33383b
+    border-radius: 2px
+    font-size: 20px
+    color: #ffffff
+    text-align: center
+    line-height: 35px
+    margin-right: 3px
+    margin-bottom: 5px
+
+  /* If you don't want the footer to be responsive, remove these media queries */
+
+  @media (max-width: 670px)
+
+    .footer-distributed
+      font: bold 14px sans-serif
+
+
+  & .footer-left,
+
+  & .footer-center,
+
+  & .footer-right
+    display: block
+    width: 100%
+    margin-bottom: 40px
+    text-align: center
+
+
+  & .footer-center i
+    margin-left: 0
+
+link[rel="shortcut icon"]
+  fill: white
