@@ -1,4 +1,4 @@
-$assetPath :"/assets/img"
+$assetPath: "/assets/img"
 $resolution1: 746px
 $resolution2: 670px
 
@@ -11,72 +11,68 @@ $resolution2: 670px
     margin-bottom: 0
     box-sizing: border-box
 
+    .contenedor
+        position: relative
+        width: 100%
+        height: 100vh
+        overflow: hidden
 
-.efxNuves .mountains
-  position: relative
-    top: 10px
-    right: 0
-    width: 100%
-    height: 100%
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            box-sizing: border-box
+            object-fit: cover
 
-.contenedor
-  position: relative
-  width: 100%
-  height: 100vh
-  overflow: hidden
+    .contenedor::before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 200px
+        z-index: 10000
+        box-sizing: border-box
 
+    .fondo
+        position: absolute
+        width: 100%
+        top: 0
+        left: 0
+        height: 100%
+        background-image: url(#{$assetPath}/mountains/prueba/fondo.png)
+        background-size: cover
 
-.contenedor img
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  box-sizing: border-box
-  object-fit: cover
+    .frente
+        position: absolute
+        width: 100%
+        top: 0
+        left: 0
+        height: 100%
+        background-image: url(#{$assetPath}/mountains/prueba/frente.png)
+        background-size: cover
 
+    .cloud
+        border: soldi red 1px
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        animation: nubes 120s infinite
+        background: url(#{$assetPath}/recursos/cloud.png) repeat
+        z-index: 0
 
-.contenedor::before
-  content: ""
-  position: absolute
-  bottom: 0
-  left: 0
-  width: 100%
-  height: 200px
-  z-index: 10000
-  box-sizing: border-box
-
-
-
-.fondo
-  position: absolute
-  width: 100%
-  top: 0
-  left: 0
-  height: 100%
-  background-image: url(#{$assetPath}/mountains/prueba/fondo.png)
-  background-size: cover
-
-
-.frente
-  position: absolute
-  width: 100%
-  top: 0
-  left: 0
-  height: 100%
-  background-image: url(#{$assetPath}/mountains/prueba/frente.png)
-  background-size: cover
-
-.cloud
-    position: absolute
-    top: 20px
-    left: 0
-    width: 100%
-    height: 100%
-    animation: nubes 120s infinite
-    background: url(#{$assetPath}/recursos/cloud.png) repeat
-    z-index: 0
-
+    .degradado
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 5%
+        background-image: url(#{$assetPath}/recursos/triangulo.png)
+        background-repeat: no-repeat
+        z-index: 0
 
 @keyframes nubes
     0%
@@ -84,16 +80,50 @@ $resolution2: 670px
 
     100%
         background-position: 5440px
-    
 
-.degradado
-  position: absolute
-  bottom: 0
-  width: 100%
-  height: 5%
-  background-image: url(#{$assetPath}/recursos/triangulo.png)
-  background-repeat: no-repeat
-  z-index: 0
+/** ----------------------------------------SECCION DE HOME------------------------------------------- **/
+.home
+    position: absolute
+    width: 100%
+    height: 100%
+    box-sizing: border-box
+    left: 0px
+    top: 7em
+    margin-bottom: 100px
+    align-items: center
+
+    .JC_Aires
+        position: relative
+        top: 0
+        text-align: center
+
+        .logocentro
+            width: 40%
+            animation-name: logo
+            animation-duration: 3s
+            animation-iteration-count: 1
+
+        span
+            padding: 0
+            margin: 0
+
+        .mantenimiento
+            top: 0
+
+        & .mantenimiento, & .instalacion, & .reparacion
+            font-size: 4em
+            color: white
+            text-shadow: 2px 0px 0px black
+            font-family: 'Prompt', san -serif
+            position: relative
+
+        
+@keyframes logo
+    0%
+        filter: blur(20px)
+
+    100%
+        filter: blur(0px)
 
 
 
@@ -114,7 +144,6 @@ $resolution2: 670px
         width: 100%
         height: 100vh
 
-
     .cloud
         position: absolute
         top: 20px
@@ -128,10 +157,9 @@ $resolution2: 670px
     @keyframes nubes
         0%
             background-position: 0px
-    
+
         100%
             background-position: 5440px
-
 
     .degradado
         position: absolute
@@ -142,63 +170,8 @@ $resolution2: 670px
         background-repeat: no-repeat
         z-index: 0
 
-
-
-
-
-
-
-
-
-#home
-    position: absolute
-    width: 100%
-    height: 100%
-    left: 0px
-    top: 7em
-    margin-bottom: 100px
-    align-items: center
-
-#JC_Aires
-    position: relative
-    top: 0
-    text-align: center
-
-#home #JC_Aires .logocentro
-    width: 40%
-    animation-name: logo
-    animation-duration: 3s
-    animation-iteration-count: 1
-
-@keyframes logo
-    0%
-        filter: blur(20px)
-
-    100%
-        filter: blur(0px)
-
-#JC_Aires span
-    padding: 0
-    margin: 0
-
-#JC_Aires .mantenimiento, #JC_Aires .instalacion, #JC_Aires .reparacion
-    font-size: 4em
-    color: white
-    text-shadow: 2px 0px 0px black
-    font-family: 'Prompt', san -serif
-
-#JC_Aires .mantenimiento
-    position: relative
-    top: 0
-
-#JC_Aires .instalacion
-    position: relative
-
-#JC_Aires .reparacion
-    position: relative
-
 @media screen and ($resolution2)
-    #home
+    .home
         position: absolute
         width: 100%
         height: 100%
@@ -207,46 +180,46 @@ $resolution2: 670px
         margin-bottom: 100px
         align-items: center
 
-    #JC_Aires
+    .home
         position: relative
         top: 0
         text-align: center
 
-    #home #JC_Aires .logocentro
+    .home .home .logocentro
         width: 40%
         animation-name: logo
         animation-duration: 3s
         animation-iteration-count: 1
 
-    #JC_Aires span
+    .home span
         padding: 0
         margin: 0
 
-    #JC_Aires .mantenimiento, #JC_Aires .instalacion, #JC_Aires .reparacion
+    .home .mantenimiento, .home .instalacion, .home .reparacion
         font-size: 2em
         color: white
         text-shadow: 2px 0px 0px black
         font-family: 'Prompt', san -serif
 
-    #JC_Aires .mantenimiento
+    .home .mantenimiento
         position: relative
         top: 0
 
-    #JC_Aires .instalacion
+    .home .instalacion
         position: relative
 
-    #JC_Aires .reparacion
+    .home .reparacion
         position: relative
 
 @media screen and (max-width: 922px)
 
-    #home #JC_Aires .logocentro
+    .home .home .logocentro
         width: 30%
         animation-name: logo
         animation-duration: 3s
         animation-iteration-count: 1
 
-    #JC_Aires .mantenimiento, #JC_Aires .instalacion, #JC_Aires .reparacion
+    .home .mantenimiento, .home .instalacion, .home .reparacion
         font-size: 3em
         color: white
         text-shadow: 2px 0px 0px black
