@@ -1,49 +1,79 @@
 <!-- FX NUBES -->
 <div class="efxNuves">
-    <div class="contenedor">
-      <img loading="lazy" id="fondo" class="fondo" src="../assets/img/mountains/prueba/fondo.png" alt="fondo">
-  
-      <img loading="lazy" id="frente" class="frente" src="../assets/img/mountains/prueba/frente.png" alt="frente">
-    </div>
-  
-    <div class="cloud"></div>
-  
-    <div class="degradado">
-    </div>
+  <div class="contenedor">
+    <img loading="lazy" id="fondo" class="fondo" src="../assets/img/mountains/prueba/fondo.png" alt="fondo">
+
+    <img loading="lazy" id="frente" class="frente" src="../assets/img/mountains/prueba/frente.png" alt="frente">
+  </div>
+
+  <div class="cloud"></div>
+
+  <div class="degradado">
+  </div>
 </div>
-  
 
-  <!-- LOS SCRIPTS NO FUNCIONAN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
 
-  <script>
-    gsap.to("#fondo", {
-      scrollTrigger: {
-        scrub: 1
-      },
-      scale: 2.5
-    })
+<!-- LOS SCRIPTS NO FUNCIONAN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
 
-    gsap.to("#frente", {
-      scrollTrigger: {
-        scrub: 1
-      },
-      scale: 2
-    })
-  </script>
-  
-  <!-- CONTENIDO ||MANTENIMIENTO, INSTALACION & REPARACION -->
+<script>
+  gsap.to("#fondo", {
+    scrollTrigger: {
+      scrub: 1
+    },
+    scale: 2.5
+  })
+
+  gsap.to("#frente", {
+    scrollTrigger: {
+      scrub: 1
+    },
+    scale: 2
+  })
+
+</script>
+
+<!-- CONTENIDO ||MANTENIMIENTO, INSTALACION & REPARACION -->
 <div id="home" class="home">
-    <div id="JC_Aires" class="JC_Aires">
-      <img loading="lazy" id="logo" class="logocentro" src="../assets/img/logo/SVG/Sin.svg" alt="logo">
-      <p>
-        <br>
-        <span id="mantenimiento" class="mantenimiento">Mantenimiento</span>
-        <br>
-        <span class="instalacion">Instalación</span>
-        <br>
-        <span class="reparacion">& Reparación</span>
-      </p>
+  <div id="JC_Aires" class="JC_Aires">
+    <img loading="lazy" id="logo" class="logocentro" src="../assets/img/logo/SVG/Sin.svg" alt="logo">
+
+    <div class="Lcentro">
+      <div class="informaciones">
+        <div class="zoom">
+          <h1 class="video">INSTALACIÓN</h1>
+          <video class="blur" loading="lazy" id="Instalacion" autoplay loop>
+            <source src="../assets/img/videos/vid1.0.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="zoom">
+          <h1 class="video">MANTENIMIENTO</h1>
+          <video class="blur" loading="lazy" id="Mantenimiento" autoplay loop>
+            <source src="../assets/img/videos/vid2.0.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="zoom">
+          <h1 class="video">REPARACIÓN</h1>
+          <video class="blur" loading="lazy" id="Reparacion" autoplay loop>
+            <source src="../assets/img/videos/vid4.0.mp4" type="video/mp4">
+          </video>
+        </div>   
+      </div>
     </div>
+
+
+
+
+   <!--  <p>
+      <br>
+      <span id="mantenimiento" class="mantenimiento">Mantenimiento</span>
+      <br>
+      <span class="instalacion">Instalación</span>
+      <br>
+      <span class="reparacion">& Reparación</span>
+    </p> -->
+  </div>
 </div>

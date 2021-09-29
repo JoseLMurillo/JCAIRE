@@ -10,6 +10,6 @@ export class FxhomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
-
 }
